@@ -1,0 +1,15 @@
+[submodule ".references/theory-jsonpath"]
+	path = .references/theory-jsonpath
+	url = https://github.com/theory/jsonpath
+[submodule ".references/jsonpath-compliance-test-suite"]
+	path = .references/jsonpath-compliance-test-suite
+	url = https://github.com/jsonpath-standard/jsonpath-compliance-test-suite
+[submodule ".references/speakeasy-jsonpath"]
+	path = .references/speakeasy-jsonpath
+	url = https://github.com/speakeasy-api/jsonpath
+[submodule ".references/theory-jsontree"]
+	path = .references/theory-jsontree
+	url = https://github.com/theory/jsontree
+[submodule ".references/oliveagle-jsonpath"]
+	path = .references/oliveagle-jsonpath
+	url = https://github.com/oliveagle/jsonpath

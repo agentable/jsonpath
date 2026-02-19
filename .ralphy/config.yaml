@@ -1,0 +1,30 @@
+# Ralphy Configuration
+# https://github.com/michaelshimeles/ralphy
+
+# Project info (auto-detected, edit if needed)
+project:
+  name: "jsonpath"
+  language: "Golang"
+  framework: ""
+  description: "RFC 9535 compliant JSONPath implementation for Go, optimized for maximum performance with native Go 1.26 idioms and `github.com/go-json-experiment/json` integration."
+
+# Rules - instructions the AI MUST follow
+# These are injected into every prompt
+rules:
+  - "Before writing code, read at least two relevant reference implementations from .references/ to understand design trade-offs."
+  - "For each design topic, explicitly record which .references directories/files were consulted."
+  - "Use Go idioms and keep APIs minimal and explicit."
+  - "Ensure all new code is covered by unit tests."
+  - "Adhere to existing coding style and conventions."
+  - "Follow KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself), and YAGNI (You Ain't Gonna Need It) principles."
+  - "Maximize code reuse whenever possible."
+  - "Follow language-specific idioms and patterns defined in the project"
+  - "Maintain consistent import organization and package patterns"
+  - "Follow established naming conventions (variables, functions, types, files)"
+  - "Apply proper error handling patterns as defined by the project"
+  - "Respect module boundaries and single responsibility at package level"
+  
+# Boundaries - files/folders the AI should not modify
+boundaries:
+  never_touch:
+    - ".references/**"
