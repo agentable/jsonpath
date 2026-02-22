@@ -31,15 +31,15 @@ type ctsFile struct {
 
 // testCase represents a single test case from the CTS.
 type testCase struct {
-	Name            string          `json:"name"`
-	Selector        string          `json:"selector"`
-	Document        any             `json:"document"`
-	Result          []any           `json:"result"`
-	Results         [][]any         `json:"results"`
-	ResultPaths     []string        `json:"result_paths"`
-	ResultsPaths    [][]string      `json:"results_paths"`
-	InvalidSelector bool            `json:"invalid_selector"`
-	Tags            []string        `json:"tags"`
+	Name            string     `json:"name"`
+	Selector        string     `json:"selector"`
+	Document        any        `json:"document"`
+	Result          []any      `json:"result"`
+	Results         [][]any    `json:"results"`
+	ResultPaths     []string   `json:"result_paths"`
+	ResultsPaths    [][]string `json:"results_paths"`
+	InvalidSelector bool       `json:"invalid_selector"`
+	Tags            []string   `json:"tags"`
 }
 
 func TestCompliance(t *testing.T) {

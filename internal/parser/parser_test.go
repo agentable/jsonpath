@@ -502,8 +502,8 @@ func TestParseMixedSelectors(t *testing.T) {
 // TestParseSingularQuery tests singular query validation.
 func TestParseSingularQuery(t *testing.T) {
 	tests := []struct {
-		name        string
-		input       string
+		name         string
+		input        string
 		wantSingular bool
 	}{
 		{

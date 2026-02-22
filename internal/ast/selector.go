@@ -21,9 +21,9 @@ const (
 // slices contiguous in memory for cache efficiency.
 type Selector struct {
 	Kind   SelectorKind
-	Name   string     // KindName: the member name
-	Index  int64      // KindIndex: the array index (may be negative)
-	Slice  SliceArgs  // KindSlice
+	Name   string      // KindName: the member name
+	Index  int64       // KindIndex: the array index (may be negative)
+	Slice  SliceArgs   // KindSlice
 	Filter *FilterExpr // KindFilter
 }
 

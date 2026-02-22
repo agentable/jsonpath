@@ -98,7 +98,7 @@ type mockFunc struct {
 	callFn     func([]any) any
 }
 
-func (f *mockFunc) Name() string                 { return f.name }
+func (f *mockFunc) Name() string                  { return f.name }
 func (f *mockFunc) ResultType() FuncType          { return f.resultType }
 func (f *mockFunc) Validate(args []ArgType) error { return f.validateFn(args) }
 func (f *mockFunc) Call(args []any) any           { return f.callFn(args) }

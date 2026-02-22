@@ -2,6 +2,7 @@ package jsonpath
 
 import (
 	"fmt"
+	"maps"
 
 	"github.com/agentable/jsonpath/functions"
 	"github.com/agentable/jsonpath/internal/ast"
@@ -98,9 +99,7 @@ func (p *Parser) Parse(expr string) (*Path, error) {
 
 	// Register built-in functions from the functions package
 	registry := newBuiltinRegistry()
-	for name, fn := range registry {
-		funcs[name] = fn
-	}
+	maps.Copy(funcs, registry)
 
 	// Add user-provided functions (can override built-ins)
 	for name, fn := range p.opts.functions {

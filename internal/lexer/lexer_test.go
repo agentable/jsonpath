@@ -555,8 +555,8 @@ func TestZeroCopyVal(t *testing.T) {
 	// Verify Val returns a substring of the original source (no allocation).
 	src := "$.foo"
 	l := New(src)
-	l.Scan() // $
-	l.Scan() // .
+	l.Scan()        // $
+	l.Scan()        // .
 	tok := l.Scan() // foo
 	val := tok.Val(l.Source())
 	assert.Equal(t, "foo", val)
@@ -795,9 +795,9 @@ func TestStringControlCharacters(t *testing.T) {
 	}{
 		{"null", "\"\x00\""},
 		{"soh", "\"\x01\""},
-		{"tab_literal", "\"\x09\""},  // tab must be escaped
-		{"lf_literal", "\"\x0A\""},   // newline must be escaped
-		{"cr_literal", "\"\x0D\""},   // carriage return must be escaped
+		{"tab_literal", "\"\x09\""}, // tab must be escaped
+		{"lf_literal", "\"\x0A\""},  // newline must be escaped
+		{"cr_literal", "\"\x0D\""},  // carriage return must be escaped
 		{"us", "\"\x1F\""},
 	}
 	for _, tc := range tests {

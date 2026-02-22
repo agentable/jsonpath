@@ -374,7 +374,7 @@ func (l *Lexer) scanNumber() Token {
 }
 
 // scanString scans a single- or double-quoted string literal per RFC 9535.
-// l.r must be '"' or '\'' on entry. The parsed value (with escapes resolved)
+// l.r must be '"' or '\” on entry. The parsed value (with escapes resolved)
 // is stored in Token.Value.
 func (l *Lexer) scanString() Token {
 	start := l.rPos

@@ -52,7 +52,7 @@ func RegisterBuiltins(r *ast.Registry) {
 // Result: ValueType (int for string/array/object, nil otherwise)
 type LengthFunc struct{}
 
-func (LengthFunc) Name() string            { return "length" }
+func (LengthFunc) Name() string             { return "length" }
 func (LengthFunc) ResultType() ast.FuncType { return ast.Value }
 
 func (LengthFunc) Validate(args []ast.ArgType) error {
@@ -92,7 +92,7 @@ func (LengthFunc) Call(args []any) any {
 // Result: ValueType (int)
 type CountFunc struct{}
 
-func (CountFunc) Name() string            { return "count" }
+func (CountFunc) Name() string             { return "count" }
 func (CountFunc) ResultType() ast.FuncType { return ast.Value }
 
 func (CountFunc) Validate(args []ast.ArgType) error {
@@ -125,7 +125,7 @@ func (CountFunc) Call(args []any) any {
 // Result: LogicalType (bool)
 type MatchFunc struct{}
 
-func (MatchFunc) Name() string            { return "match" }
+func (MatchFunc) Name() string             { return "match" }
 func (MatchFunc) ResultType() ast.FuncType { return ast.Logical }
 
 func (MatchFunc) Validate(args []ast.ArgType) error {
@@ -159,7 +159,7 @@ func (MatchFunc) Call(args []any) any {
 // Result: LogicalType (bool)
 type SearchFunc struct{}
 
-func (SearchFunc) Name() string            { return "search" }
+func (SearchFunc) Name() string             { return "search" }
 func (SearchFunc) ResultType() ast.FuncType { return ast.Logical }
 
 func (SearchFunc) Validate(args []ast.ArgType) error {
@@ -193,7 +193,7 @@ func (SearchFunc) Call(args []any) any {
 // Result: ValueType
 type ValueFunc struct{}
 
-func (ValueFunc) Name() string            { return "value" }
+func (ValueFunc) Name() string             { return "value" }
 func (ValueFunc) ResultType() ast.FuncType { return ast.Value }
 
 func (ValueFunc) Validate(args []ast.ArgType) error {

@@ -19,10 +19,10 @@ type testFunc struct {
 	callFn     func([]any) any
 }
 
-func (f *testFunc) Name() string              { return f.name }
-func (f *testFunc) ResultType() FuncType       { return f.resultType }
+func (f *testFunc) Name() string                  { return f.name }
+func (f *testFunc) ResultType() FuncType          { return f.resultType }
 func (f *testFunc) Validate(args []ArgType) error { return f.validateFn(args) }
-func (f *testFunc) Call(args []any) any        { return f.callFn(args) }
+func (f *testFunc) Call(args []any) any           { return f.callFn(args) }
 
 func newTestFunc(name string, rt FuncType) *testFunc {
 	return &testFunc{

@@ -210,7 +210,7 @@ type builtinFunc struct {
 	validate   func([]ArgType) error
 }
 
-func (f *builtinFunc) Name() string                 { return f.name }
+func (f *builtinFunc) Name() string                  { return f.name }
 func (f *builtinFunc) ResultType() FuncType          { return f.resultType }
 func (f *builtinFunc) Validate(args []ArgType) error { return f.validate(args) }
 
